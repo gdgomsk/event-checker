@@ -35,7 +35,7 @@ function checkEvents() {
 
 function updateUnread(text) {
     chrome.browserAction.setBadgeText({
-        text: text.toString()
+        text: '' + text
     });
 };
 
