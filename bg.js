@@ -1,6 +1,6 @@
 /* Settings */
 
-var checkInterval = 3600 * 1000;
+var checkInterval = 3600 * 100;
 
 var groupId = '102520175692033125056';
 var key = 'AIzaSyCnZJ9bTzXA3G_SSDX6Zo9T35n02xnvCSk';
