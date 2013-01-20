@@ -13,19 +13,44 @@ var groupPage = groupPageTemplate.replace('{userId}', groupId);
 
 /* Functions  */
 
+function restoreStateAfterAlert() {
+    chrome.browserAction.setIcon({ path: 'icon19.png' });
+}
+
+function checkEventsOnAlert(events) {
+    for (var i = 0; i < events.length; i++) {
+        for (var j = 0; j < alertMap.length; j++) {
+            if (events[0].title.toLowerCase().indexOf(alertMap[j].word.toLowerCase()) >= 0 ||
+                events[0].object.content.toLowerCase().indexOf(alertMap[j].word.toLowerCase()) >= 0) {
+                alertMap[j].handler();
+                return;
+            }
+        }
+    }
+    restoreStateAfterAlert();
+}
+
 function checkEvents() {
     $.ajax({
         url: activitiesUrl,
         success: function(data) {
             if(localStorage['lastActivityUrl']) {
+                var unread = -1;
+
                 for (var i = 0; i < data.items.length; i++) {
                     if (data.items[i].url == localStorage['lastActivityUrl']) {
-                        updateUnread(i || '');
-                        return;
+                        unread = i;
+                        break;
                     }
                 }
 
-                updateUnread(data.items.length + '+');
+                if (unread < 0) {
+                    updateUnread(data.items.length + '+');
+                    checkEventsOnAlert(data.items);
+                } else {
+                    updateUnread(unread || '');
+                    checkEventsOnAlert(data.items.slice(0, unread));
+                }
             } else {
                 localStorage['lastActivityUrl'] = data.items[0].url;
             }
@@ -43,17 +68,14 @@ function reset() {
     $.ajax({
         url: activitiesUrl,
         success: function(data) {
-            updateUnread('');
             localStorage['lastActivityUrl'] = data.items[0].url;
+
+            checkEvents();
         }
     });
 }
 
 /* Events */
-
-chrome.browserAction.onClicked.addListener(function(t) {
-    chrome.tabs.create({ url : groupPage }, function(tab) { });
-});
 
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
     if (request.method == "reset") {
@@ -67,4 +89,3 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
 
 setInterval(checkEvents, checkInterval);
 checkEvents();
-
