@@ -11,7 +11,7 @@ var groupPageTemplate = 'https://plus.google.com/u/0/{userId}';
 var activitiesUrl = activitiesUrlTemplate.replace('{userId}', groupId).replace('{key}', key);
 var groupPage = groupPageTemplate.replace('{userId}', groupId);
 
-/* Functions */
+/* Functions  */
 
 function checkEvents() {
     $.ajax({
