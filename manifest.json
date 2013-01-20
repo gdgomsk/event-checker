@@ -5,16 +5,13 @@
     "manifest_version": 2,
 
     "background": {
-        "scripts": ["thirdparty/jquery.min.js", "bg.js"]
+        "scripts": ["thirdparty/jquery.min.js", "bg.js", "alertMap.js"]
     },
 
     "browser_action" : {
         "default_icon"      : "icon19.png",
         "default_popup"     : "popup.html"
     },
-    "permissions": [
-        "tabs"
-    ],
 
     "content_scripts": [
     {
