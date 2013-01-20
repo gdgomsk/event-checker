@@ -1,4 +1,4 @@
-﻿{
+{
     "name": "События GDG Omsk",
     "version": "1.0.0.0",
     "description": "Расширение уведомяет о новых мероприятиях, проводимых GDG Omsk",
@@ -9,7 +9,8 @@
     },
 
     "browser_action" : {
-        "default_icon"      : "icon19.png"
+        "default_icon"      : "icon19.png",
+        "default_popup"     : "popup.html"
     },
     "permissions": [
         "tabs"
