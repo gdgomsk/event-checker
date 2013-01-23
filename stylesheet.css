@@ -1,0 +1,28 @@
+body {
+        font-family: arial, tahoma, sans-serif;
+        text-align:center;
+}
+
+div.nav {
+        background-color: #E0E0E0;
+        font-size: 12pt; 
+        font-weight: bold; 
+        font-style: normal; 
+        text-align:left;
+        color: #000000; 
+        border:solid black 1px;
+        padding: 5px; /*dating 3*/
+/*      padding-left: 35px; */
+}
+
+a:link {
+        text-decoration: none;
+}
+
+a:hover {
+        text-decoration: underline;
+}
+
+div.seemore {
+        text-align:right;
+}
