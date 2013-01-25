@@ -1,12 +1,9 @@
 var page = {
     create: function() {
 
-
         var headNavBar = document.createElement('div');
         headNavBar.setAttribute('id', 'super');
         document.body.insertBefore(headNavBar, document.body.firstChild);
-
-
 
         headNavBar.innerHTML = '<div class="imageHeader">' +
                 '<a href="http://www.gdgomsk.org/" target="_blank">' +
@@ -14,14 +11,29 @@ var page = {
                 '</a>' +
                 '<br />' +
                 '</div>' +
-                '<div class="nav">' +
-                '<a href="blog.html">Blog posts</a> &nbsp; | ' +
-                '<a href="twitter.html">Tweets</a> &nbsp; | ' +
-                '<a href="popup.html">Links</a> &nbsp; | ' +
-                '<a href="about.html">About</a> &nbsp; ' +
-                '</div>';
+                '<nav class="menu">' +
+                    '<ul>' +
+                        '<li>' +
+                            '<a href="blog.html">Blog posts</a>' +
+                        '</li>' +
+                        '<li>' +
+                            '<a href="twitter.html">Tweets</a>' +
+                        '</li>' +
+                        '<li>' +
+                            '<a href="popup.html">Links</a>' +
+                        '</li>' +
+                        '<li>' +
+                            '<a href="about.html">About</a>' +
+                        '</li>'+
+                    '</ul>' +
+                '</nav>';
 
-
+        $('nav.menu a').each(function(index, elem) {
+            if (document.URL.indexOf(elem.getAttribute('href')) != -1)
+            {
+                $(elem).addClass('current');
+            }
+        });
     }
 };
 
