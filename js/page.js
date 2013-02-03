@@ -38,6 +38,5 @@ var page = {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  //document.querySelector('button').addEventListener('click', clickHandler);
   page.create();
 });

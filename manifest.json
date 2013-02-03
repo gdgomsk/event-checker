@@ -14,9 +14,6 @@
         "default_popup"     : "pages/popup.html"
     },
     "content_security_policy": "script-src 'self' https://api.twitter.com/; object-src 'self'",
-    "permissions": [
-        "tabs"
-    ],
     "content_scripts": [
     {
         "matches": ["https://plus.google.com/*"],
