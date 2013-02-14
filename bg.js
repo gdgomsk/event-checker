@@ -5,6 +5,7 @@ var checkInterval = 3600 * 100;
 var groupId = '102520175692033125056';
 var key = 'AIzaSyCnZJ9bTzXA3G_SSDX6Zo9T35n02xnvCSk';
 
+//https://developers.google.com/events/feed/json?group=102520175692033125056&start=1325397600&end=1357020000
 var activitiesUrlTemplate = 'https://www.googleapis.com/plus/v1/people/{userId}/activities/public?key={key}';
 var groupPageTemplate = 'https://plus.google.com/u/0/{userId}';
 

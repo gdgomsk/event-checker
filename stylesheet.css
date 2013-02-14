@@ -93,3 +93,9 @@ iframe::-webkit-scrollbar-thumb {
     text-align: left;
     width: 427px;
 }
+
+.loading {
+    width: 32px;
+    height: 32px;
+    margin: 50px auto;
+}
