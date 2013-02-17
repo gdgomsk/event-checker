@@ -13,7 +13,10 @@
         "default_title"     : "GDG Omsk News",
         "default_popup"     : "pages/popup.html"
     },
-    "content_security_policy": "script-src 'self' https://api.twitter.com/; object-src 'self'",
+    "permissions" : [
+        "https://api.twitter.com/*"
+    ],
+    "content_security_policy": "script-src 'self'; object-src 'self'",
     "content_scripts": [
     {
         "matches": ["https://plus.google.com/*"],
