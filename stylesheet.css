@@ -99,3 +99,16 @@ iframe::-webkit-scrollbar-thumb {
     height: 32px;
     margin: 50px auto;
 }
+
+.twitterDate {
+    margin: 10px;
+    line-height: 12px;
+    font-size: 10px;
+    color: #969696;
+}
+
+.twitterDetailed {
+    margin: 10px;
+    line-height: 12px;
+    font-size: 10px;
+}
