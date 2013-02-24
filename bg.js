@@ -15,7 +15,7 @@ var groupPage = groupPageTemplate.replace('{userId}', groupId);
 /* Functions  */
 
 function restoreStateAfterAlert() {
-    chrome.browserAction.setIcon({ path: 'icon19.png' });
+    chrome.browserAction.setIcon({ path: 'images/icon19.png' });
 }
 
 function checkEventsOnAlert(events) {

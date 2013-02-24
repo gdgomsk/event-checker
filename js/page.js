@@ -14,16 +14,16 @@ var page = {
                 '<nav class="menu">' +
                     '<ul>' +
                         '<li>' +
-                            '<a href="blog.html">Blog posts</a>' +
+                            '<a href="blog.html">Блог</a>' +
                         '</li>' +
                         '<li>' +
-                            '<a href="twitter.html">Tweets</a>' +
+                            '<a href="twitter.html">Твиттер</a>' +
                         '</li>' +
                         '<li>' +
-                            '<a href="popup.html">Links</a>' +
+                            '<a href="popup.html">Ссылки</a>' +
                         '</li>' +
                         '<li>' +
-                            '<a href="about.html">About</a>' +
+                            '<a href="about.html">О расширении</a>' +
                         '</li>'+
                     '</ul>' +
                 '</nav>';
