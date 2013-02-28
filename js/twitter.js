@@ -36,6 +36,6 @@ $.ajax({
         });
 
         $('.page a').attr('target', '_blank');
-        page.append($('<a>', {href: 'http://twitter.gdgomsk.org', text: 'Читать еще...', target: '_blank'}));
+        page.append($('<a>', {href: 'https://twitter.com/gdgomsk', text: 'Читать еще...', target: '_blank'}));
     }
 });

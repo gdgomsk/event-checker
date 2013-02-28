@@ -112,3 +112,8 @@ iframe::-webkit-scrollbar-thumb {
     line-height: 12px;
     font-size: 10px;
 }
+
+ul.links li {
+    list-style-image: url(images/li.png);
+    padding: 5px;
+}
