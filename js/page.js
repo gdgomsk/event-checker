@@ -6,7 +6,7 @@ var page = {
         document.body.insertBefore(headNavBar, document.body.firstChild);
 
         headNavBar.innerHTML = '<div class="imageHeader">' +
-                '<a href="http://plus.gdgomsk.org/" target="_blank">' +
+                '<a href="https://plus.google.com/u/0/102520175692033125056/posts" target="_blank">' +
                 '<img src="../images/logo.png" style="height:100px;border:0" title="GDG Omsk" alt="GDG Omsk"/>' +
                 '</a>' +
                 '<br />' +
