@@ -20,10 +20,13 @@ var page = {
                             '<a href="twitter.html">Твиттер</a>' +
                         '</li>' +
                         '<li>' +
+                            '<a href="plus.html">G+</a>' +
+                        '</li>' +
+                        '<li>' +
                             '<a href="popup.html">Ссылки</a>' +
                         '</li>' +
                         '<li>' +
-                            '<a href="about.html">О расширении</a>' +
+                            '<a href="about.html">?</a>' +
                         '</li>'+
                     '</ul>' +
                 '</nav>';

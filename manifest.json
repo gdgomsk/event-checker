@@ -11,7 +11,7 @@
     "browser_action" : {
         "default_icon"      : "images/icon19.png",
         "default_title"     : "GDG Omsk News",
-        "default_popup"     : "pages/popup.html"
+        "default_popup"     : "pages/plus.html"
     },
     "permissions" : [
         "https://api.twitter.com/*"

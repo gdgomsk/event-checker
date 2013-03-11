@@ -117,3 +117,8 @@ ul.links li {
     list-style-image: url(images/li.png);
     padding: 5px;
 }
+
+.plusTitle {
+    padding-bottom: 10px;
+    font-size: 20px;
+}
